@@ -7,11 +7,13 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.ComponentOrientation;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.sql.Time;
 
 import javax.jws.WebParam.Mode;
 import javax.swing.BorderFactory;
@@ -26,6 +28,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 //import javax.swing.JScrollPane;
 //import javax.swing.JTextArea;
 import javax.swing.KeyStroke;
@@ -47,7 +50,7 @@ public class cHW01_Calculator_T153337 extends JFrame {
 	JMenuItem mniCop = new JMenuItem("Copy");
 	JMenuItem mniPas = new JMenuItem("Paste");
 	JMenuItem mniAbo = new JMenuItem("About");
-	JTextArea txaContent = new JTextArea(), txaDisible = new JTextArea();
+	JTextField txaContent = new JTextField(), txaDisible = new JTextField();
 
 	JRadioButton optDegrees = new JRadioButton("Degrees");
 	JRadioButton optRadians = new JRadioButton("Radians");
@@ -67,6 +70,7 @@ public class cHW01_Calculator_T153337 extends JFrame {
 	ImageIcon imCop = new ImageIcon("C:/Users/HP/Downloads/Cal/1.png");
 	ImageIcon imPas = new ImageIcon("C:/Users/HP/Downloads/Cal/2.png");
 	ImageIcon imAbo = new ImageIcon("C:/Users/HP/Downloads/Cal/3.png");
+	Font f = new Font("Times New Roman",Font.BOLD, 30);
 
 	String[][] sStandard = { { "MC", "MR", "MS", "M+", "M-" }, { "<-", "CE", "C", "+/-", "sqrt" },
 			{ "7", "8", "9", "/", "%" }, { "4", "5", "6", "*", "1/x" }, { "1", "2", "3", "-", "=" },
@@ -99,6 +103,8 @@ public class cHW01_Calculator_T153337 extends JFrame {
 		txaContent.setBounds(12, 10, 240, 80);
 		//txaContent.setText("kasa");
 		txaContent.setEditable(false);
+		txaContent.setFont(f);
+		
 	}
 
 	public void txaSciPro() {
